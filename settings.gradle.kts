@@ -1,3 +1,3 @@
 
-rootProject.name = "benchmarks"
+rootProject.name = "poi-jmh"
 

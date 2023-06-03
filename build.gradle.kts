@@ -31,37 +31,13 @@ val commitHash = Runtime
     }
 
 val timestamp: String = SimpleDateFormat("yyyyMMdd'T'HHmmss").format(Date())
-//fun getDate(): String = Date().toString()//.format("yyyyMMdd_HHmm")
+
 
 jmh {
-    // Configure the JMH task here
-//        include = "org\\.example\\.benchmark.*"
-//        resultFormat = "csv"
-//        resultsFile = file('perf_logs/jmh_results_' + getDate()+ '.csv')
-    //        profilers = listOf("gc", "stack", "hs_thr")
-
-    // Additional configurations for the task (if needed)
-//    jmhTask.group = "benchmark"
-//    description.set("Runs JMH benchmarks")
-
-//val jmh by tasks.getting(JmhPluginExtension::class) {
-//jmh {
-//    jmhVersion = "1.34"
-//    jvmArgs = listOf("-Xms2048m", "-Xmx2048m")
-
-//    include = 'org\\..*Bench.*'
     resultFormat.set("csv")
-//    resultFormat = "csv"
-//    resultFormat = 'csv'
     resultsFile.set(File("perf_logs/benchmarks.json"))
     resultsFile.set(File("perf_logs/results_${timestamp}_${commitHash}.csv"))
-//    resultsFile = file('perf_logs/jmh_results_' + getDate()+ '.csv')
-
-    // for list of available profilers see http://java-performance.info/introduction-jmh-profilers/
-//    profilers = Arrays.asList("")
-//}
-    zip64 = true
-
+//    zip64 = true
 }
 
 
